@@ -1,77 +1,9 @@
-# Automação de Cotação de Frete
+# Automação de Cotação de Frete de um E-commerce real
 
-Script Python que lê pedidos sem frete no Google Sheets, acessa o site da FM Transportes, cota o frete automaticamente e salva o resultado de volta na planilha.
-
----
-
-## Pré-requisitos
-
-- Python 3.11 ou superior
-- Conta de serviço Google com acesso às planilhas (arquivo `credentials.json`)
+Script Python que lê pedidos sem frete no Google Sheets, acessa o site da transportadora, cota o frete automaticamente e salva o resultado de volta na planilha.
 
 ---
 
-## Instalação
-
-### 1. Instalar dependências Python
-
-```bash
-cd frete
-pip install -r requirements.txt
-```
-
-### 2. Instalar o navegador do Playwright
-
-```bash
-playwright install chromium
-```
-
-### 3. Configurar variáveis de ambiente
-
-Copie `.env.example` para `.env` e preencha os valores:
-
-```bash
-cp .env.example .env
-```
-
-O arquivo `.env` deve ficar assim:
-```
-GOOGLE_CREDENTIALS_PATH=credentials.json
-TRANSPORTADORA_LOGIN=seu_usuario
-TRANSPORTADORA_SENHA=sua_senha
-PLAYWRIGHT_HEADLESS=false
-```
-
-### 4. Adicionar o arquivo de credenciais Google
-
-Coloque o arquivo `credentials.json` da conta de serviço na pasta `frete/`.
-
-> **Como obter:** Google Cloud Console → IAM → Contas de serviço → Criar chave → JSON
-
-Compartilhe as duas planilhas com o e-mail da conta de serviço (com permissão de **editor**).
-
-### 5. Ajustar o config.json
-
-Abra `config.json` e confirme os nomes das abas (guias) das planilhas:
-
-```json
-"planilha_vendas": {
-    "sheet_name": "Vendas",          ← nome exato da aba no Google Sheets
-    "coluna_numero_pedido": "NUMERO PEDIDO"  ← nome exato da coluna de ID do pedido
-},
-"planilha_pedidos": {
-    "sheet_name": "Pedidos",         ← nome exato da aba no Google Sheets
-    "coluna_numero_pedido": "NUMERO PEDIDO"  ← deve ser o mesmo identificador
-}
-```
-
----
-
-## Como usar
-
-```bash
-python main.py
-```
 
 O script vai:
 1. Ler todas as linhas da Planilha de Vendas com a coluna `FRETE` vazia
