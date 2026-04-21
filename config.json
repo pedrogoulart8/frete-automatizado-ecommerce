@@ -1,0 +1,26 @@
+{
+  "planilha_vendas": {
+    "spreadsheet_id": "1tvHiZEcN5wjWBUXLkEKpEtZfIKvI9X5iIYJiVOUT4hc",
+    "sheet_name": "Vendas",
+    "coluna_frete": "FRETE",
+    "coluna_cliente": "CLIENTE"
+  },
+  "planilha_pedidos": {
+    "spreadsheet_id": "1dN1PLFK-4whFcI3096Fs1OeDbsAcgzxi2QhmBpkYeTs",
+    "sheet_name": "FRETE NOVO 02-04 - Copia.csv",
+    "coluna_cep": "CEP",
+    "coluna_valor_declarado": "VALOR DECLARADO",
+    "coluna_cliente": "DESTINATARIO"
+  },
+  "transportadora": {
+    "url": "https://alpha.fmtransportes.com.br/quote/client",
+    "remetente": "Vesty Prata",
+    "volume": {
+      "quantidade": 1,
+      "peso_kg": "0,01",
+      "comprimento_cm": 12,
+      "altura_cm": 4,
+      "largura_cm": 12
+    }
+  }
+}
