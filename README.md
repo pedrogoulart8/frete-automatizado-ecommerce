@@ -2,6 +2,8 @@
 
 Script Python que lê pedidos sem frete no Google Sheets, acessa o site da transportadora, cota o frete automaticamente e salva o resultado de volta na planilha.
 
+![Demo](assets/demo.gif)
+
 ---
 
 
